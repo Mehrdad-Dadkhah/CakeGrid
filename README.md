@@ -107,8 +107,10 @@ If you want have a div separator with special css and specify main value and oth
 		$this->Grid->addTree('tree_item');
 		echo $this->Grid->generate($Results);
 	?>
-	tree_item is a element name that contain all thing you want have in tree management
-	for example:
+	
+tree_item is a element name that contain all thing you want have in tree management
+for example:
+	
 	<?php
 		echo $this->Html->link($data['CommentQuestion']['member_id'], array( 
 		    'controller' => 'users', 
@@ -121,11 +123,13 @@ If you want have a div separator with special css and specify main value and oth
 		echo $this->Html->tag('div', h($data['CommentQuestion']['uprate']));     
 		echo $this->Html->tag('div', h($data['CommentQuestion']['downrate']));
 	?>
-	you have $data in the element that contain tree data
 	
-	in the second parameter in addTree function you can send options:
+you have $data in the element that contain tree data
+
+in the second parameter in addTree function you can send options:
+	
 	     'model' => name of the model (key) to look for in the data array. defaults to the first model for the current
-	  controller. If set to false 2d arrays will be allowed/expected.
+	      controller. If set to false 2d arrays will be allowed/expected.
 	     'alias' => the array key to output for a simple ul (not used if element or callback is specified)
 	     'type' => type of output defaults to ul
 	     'itemType => type of item output default to li
@@ -210,18 +214,16 @@ __Note:__ Named parameters are not yet supported, but so array('named' => array(
 to have a column that show status of each records and have a ajax link to change status use this action
 you should have a field with 0 or 1 data that show status
 as default I set status for name of this column and id for primary key of table you can change it
-
 just write this
-
-<?php $this->Grid->addStatusManage(); ?>
-
+	
+	$this->Grid->addStatusManage();
+	
 in Advanced:
-
-<?php $this->Grid->addStatusManage('article status',array('fieldName' => 'confirm','primaryKey' => 'key')); ?>
-
+	
+	$this->Grid->addStatusManage('article status',array('fieldName' => 'confirm','primaryKey' => 'key'));
+	
 and then you should write a method in curent controller to change status with changeStatus name like:
-
-<?php
+	
 	function changeStatus($status = null,$id = null){
 	    $this->layout = 'ajax';
 	    if($this->request->is('get')){
@@ -231,10 +233,8 @@ and then you should write a method in curent controller to change status with ch
 	    }
 		$this->autoRender = false;
 	}
-?>
-
+	
 it's ok ...
-
 ## Total Row
 
 To create a "totals" row. You can set a column to total. Only money and numbers will work (obviously).
@@ -334,14 +334,15 @@ and in the block_counter element:
 	);
 
 and we have some part of data like allData to have all return data to manage ...
-
 ## Empty fileds
 if be a empty field in a record you can show a message with tow way ...
 as default it shows "No Result"
 you can set a global option for current table with:
+ 	
 	$this->options(
 		'empty_message' => __('empty')
 	);
+	
 and can specify empty text for each column for example:
 
 	$this->Grid->addColumn(__('سرآغاز'),'/ParentFrontsMenu/title',array('emptyVal' => __('بدون سرآغاز'))); 
