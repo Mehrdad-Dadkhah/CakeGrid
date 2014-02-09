@@ -319,11 +319,11 @@ So in your element (/Elements/table/status.ctp for example)
 		</center>
 
 ## Element Other Value
-	to send your value to colum's element
+to send your value to colum's element
 	
 	$this->Grid->addColumn(__('بلوک راست'),'/blocks_sitelayouts/place',array('element' => 'block_counter','elementOtherValue' => array('place' => 0)));
 	
-	and in the block_counter element:
+and in the block_counter element:
 	
 	<?php
 		$cnt = 0;
@@ -337,35 +337,35 @@ So in your element (/Elements/table/status.ctp for example)
 	    );
     ?>
     
-    and we have some part of data like allData to have all return data to manage ...
+and we have some part of data like allData to have all return data to manage ...
     
 ## Empty fileds
 if be a empty field in a record you can show a message with tow way ...
 as default it shows "No Result"
 you can set a global option for current table with:
-<?php
-	$this->options(
-		'empty_message' => __('empty')
-	);
-?>
+	<?php
+		$this->options(
+			'empty_message' => __('empty')
+		);
+	?>
 
 and can specify empty text for each column for example:
 
-<?php
-	$this->Grid->addColumn(__('سرآغاز'),'/ParentFrontsMenu/title',array('emptyVal' => __('بدون سرآغاز'))); 
-?>
+	<?php
+		$this->Grid->addColumn(__('سرآغاز'),'/ParentFrontsMenu/title',array('emptyVal' => __('بدون سرآغاز'))); 
+	?>
 
 ## Readable Value
 if field value is int and you want to replace it to readable value can use this feature like:
 
-<?php
-	$fileType = array(
-	    'عکس',
-	    'صوت',
-	    'فیلم'
-	);
-	$this->Grid->addColumn(__('نوع فایل'),'/GalleriesFile/type',array('readableVal' => $fileType));
-?>
+	<?php
+		$fileType = array(
+		    'عکس',
+		    'صوت',
+		    'فیلم'
+		);
+		$this->Grid->addColumn(__('نوع فایل'),'/GalleriesFile/type',array('readableVal' => $fileType));
+	?>
 
 ##License
 
