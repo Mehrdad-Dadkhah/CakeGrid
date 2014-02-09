@@ -33,7 +33,7 @@ _[GIT Submodule]_
 
 In your app directory type:
 
-	git submodule add -b master https://github.com/zoghal/CakeGrid.git
+	git submodule add -b https://github.com/Mehrdad-Dadkhah/CakeGrid.git
 	git submodule init
 	git submodule update
 
@@ -42,7 +42,7 @@ In your app directory type:
 
 In your `Plugin` directory type:
 
-	git clone -b master https://github.com/zoghal/CakeGrid.git CakeGrid
+	git clone -b master https://github.com/Mehrdad-Dadkhah/CakeGrid.git
 
 ### Enable plugin
 
@@ -84,6 +84,7 @@ In your view file you can now create grids easily by doing something like this:
 	?>	
 ### Grid and div		
 If you want have a div separator with special css and specify main value and other common value you can doing something like this:
+
 	<?php
 	 	$this->Grid->options(array('type' => 'divGrid'));
 		$this->Grid->addColumn( __('شناسه'), "/Administrator/id",array('width' => '10%'));
@@ -96,7 +97,9 @@ If you want have a div separator with special css and specify main value and oth
 	
 		echo $this->Grid->generate($Results);
 	?>
+	
 ## Grid and tree management
+
 	<?php
 	 	$this->Grid->options(array('type' => 'divGrid'));
 		$this->Grid->addColumn( __('شناسه'), "/CommentQuestion/id",array('width' => '10%'));
@@ -203,30 +206,32 @@ Linkable is the option parameter takes 3 sub options. url, trailingParams, and H
 The url could be considered the controller and action, and maybe a named parameter. The trailing parameters is the id or whatever you like. It will be pulled from the result.
 __Note:__ Named parameters are not yet supported, but so array('named' => array('id' => '/Page/id')) will not work, but array('id' => '/Page/id') will
 
-## addStatusManage
+## addStatusManagement
 to have a column that show status of each records and have a ajax link to change status use this action
 you should have a field with 0 or 1 data that show status
 as default I set status for name of this column and id for primary key of table you can change it
 
 just write this
 
-$this->Grid->addStatusManage();
+<?php $this->Grid->addStatusManage(); ?>
 
 in Advanced:
 
-$this->Grid->addStatusManage('article status',array('fieldName' => 'confirm','primaryKey' => 'key'));
+<?php $this->Grid->addStatusManage('article status',array('fieldName' => 'confirm','primaryKey' => 'key')); ?>
 
 and then you should write a method in curent controller to change status with changeStatus name like:
 
-function changeStatus($status = null,$id = null){
-    $this->layout = 'ajax';
-    if($this->request->is('get')){
-            $this->Article->id=$id;
-            $newStatus = abs($status - 1);
-            $this->Article->saveField('status',$newStatus);
-    }
-	$this->autoRender = false;
-}
+<?php
+	function changeStatus($status = null,$id = null){
+	    $this->layout = 'ajax';
+	    if($this->request->is('get')){
+	            $this->Article->id=$id;
+	            $newStatus = abs($status - 1);
+	            $this->Article->saveField('status',$newStatus);
+	    }
+		$this->autoRender = false;
+	}
+?>
 
 it's ok ...
 
@@ -338,23 +343,29 @@ So in your element (/Elements/table/status.ctp for example)
 if be a empty field in a record you can show a message with tow way ...
 as default it shows "No Result"
 you can set a global option for current table with:
-$this->options(
-	'empty_message' => __('empty')
-);
+<?php
+	$this->options(
+		'empty_message' => __('empty')
+	);
+?>
 
 and can specify empty text for each column for example:
 
-$this->Grid->addColumn(__('سرآغاز'),'/ParentFrontsMenu/title',array('emptyVal' => __('بدون سرآغاز'))); 
+<?php
+	$this->Grid->addColumn(__('سرآغاز'),'/ParentFrontsMenu/title',array('emptyVal' => __('بدون سرآغاز'))); 
+?>
 
 ## Readable Value
-if field value is int and you want to change it to readable value can use this feature like:
+if field value is int and you want to replace it to readable value can use this feature like:
 
-$fileType = array(
-    'عکس',
-    'صوت',
-    'فیلم'
-);
-$this->Grid->addColumn(__('نوع فایل'),'/GalleriesFile/type',array('readableVal' => $fileType));
+<?php
+	$fileType = array(
+	    'عکس',
+	    'صوت',
+	    'فیلم'
+	);
+	$this->Grid->addColumn(__('نوع فایل'),'/GalleriesFile/type',array('readableVal' => $fileType));
+?>
 
 ##License
 
