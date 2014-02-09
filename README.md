@@ -16,7 +16,7 @@ thanks from zoghal(Mr Saleh Soozanchi)
 
 * CakePHP 2.2.x+
 * PHP5
-
+ 
 
 ## Installation
 For CakePHP 1.3 support, please see the [1.3 branch](https://github.com/bobbytables/CakeGrid).
