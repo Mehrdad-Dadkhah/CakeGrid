@@ -11,13 +11,6 @@ position:relative;
 border-spacing:0px 0px;
 width:100%;
 }
-.DataGrid .header{
-border:1px solid gray;
-/*border-radius*/
--webkit-border-radius:0px 15px 0px 15px;
-   -moz-border-radius:0px 15px 0px 15px;
-        border-radius:0px 15px 0px 15px;
-}
 .DataGrid table thead  tr.cg_header th, .DataGrid table tbody  tr td{
 padding:0px 5px;
 border-right:1px solid #CCCCCC;
@@ -32,8 +25,39 @@ background:#E2E2DC;
 cursor:pointer;
 }
 .DataGrid .data{
+background:rgb(255,255,255);
+/* Old browsers */
+/*linear-gradient*/
+background:-webkit-gradient(linear,0 0,100% 100%,color-stop(rgba(255,255,255,1),0),color-stop(rgba(241,241,241,1),0.4),color-stop(rgba(225,225,225,1),0.56),color-stop(rgba(246,246,246,1),1));
+background:-webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 40%, rgba(225,225,225,1) 56%, rgba(246,246,246,1) 100%);
+background:   -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 40%, rgba(225,225,225,1) 56%, rgba(246,246,246,1) 100%);
+background:     -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 40%, rgba(225,225,225,1) 56%, rgba(246,246,246,1) 100%);
+background:        linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 40%, rgba(225,225,225,1) 56%, rgba(246,246,246,1) 100%);
+/* FF3.6+ */
+background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(40%,rgba(241,241,241,1)), color-stop(56%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1)));
+/* Chrome,Safari4+ */
+background:-webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 40%,rgba(225,225,225,1) 56%,rgba(246,246,246,1) 100%);
+background:   -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 40%,rgba(225,225,225,1) 56%,rgba(246,246,246,1) 100%);
+background:     -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 40%,rgba(225,225,225,1) 56%,rgba(246,246,246,1) 100%);
+background:        linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 40%,rgba(225,225,225,1) 56%,rgba(246,246,246,1) 100%);
+/* Chrome10+,Safari5.1+ */
+/* Opera 11.10+ */
+/* IE10+ */
+background:-webkit-gradient(linear,100% 100%,0 0,color-stop(rgba(255,255,255,1),0),color-stop(rgba(241,241,241,1),0.4),color-stop(rgba(225,225,225,1),0.56),color-stop(rgba(246,246,246,1),1));
+background:-webkit-linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 40%,rgba(225,225,225,1) 56%,rgba(246,246,246,1) 100%);
+background:   -moz-linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 40%,rgba(225,225,225,1) 56%,rgba(246,246,246,1) 100%);
+background:     -o-linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 40%,rgba(225,225,225,1) 56%,rgba(246,246,246,1) 100%);
+background:        linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 40%,rgba(225,225,225,1) 56%,rgba(246,246,246,1) 100%);
+/* W3C */
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 );
+/* IE6-9 fallback on horizontal gradient */
 position:relative;
 margin:8px 5px;
+border:1px solid gray;
+/*border-radius*/
+-webkit-border-radius:0px 15px 0px 15px;
+   -moz-border-radius:0px 15px 0px 15px;
+        border-radius:0px 15px 0px 15px;
 }
 .DataGrid .data .mainValue{
 font-size:18px;
@@ -86,55 +110,13 @@ width:100%;
 .DataGrid table thead  tr.cg_header th:last-child, .DataGrid table tbody  tr td:last-child{
 border-left:none;
 }
-.DataGrid table thead  tr.cg_row td:last-child{
-border-left:1px solid gray !important;
-/*border-radius*/
--webkit-border-radius:15px 0px 0px 0px;
-   -moz-border-radius:15px 0px 0px 0px;
-        border-radius:15px 0px 0px 0px;
-}
-.DataGrid .cg_header{
-background:rgb(255,255,255);
-/* Old browsers */
-/*linear-gradient*/
-background:-webkit-gradient(linear,left top,left bottom,color-stop(rgba(255,255,255,1),0),color-stop(rgba(241,241,241,1),0.5),color-stop(rgba(225,225,225,1),0.51),color-stop(rgba(246,246,246,1),1));
-background:-webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
-background:   -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
-background:     -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
-background:        linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
-/* FF3.6+ */
-background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(241,241,241,1)), color-stop(51%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1)));
-/* Chrome,Safari4+ */
-background:-webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:   -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:     -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:        linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-/* Chrome10+,Safari5.1+ */
-/* Opera 11.10+ */
-/* IE10+ */
-/*@@prefixmycss->No equivalent*/
-background:-webkit-linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:   -moz-linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:     -o-linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:        linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-/* W3C */
-filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
-/* IE6-9 */
-border:1px solid gray!important;
-/*border-radius*/
--webkit-border-radius:15px 15px 0px 0px;
-   -moz-border-radius:15px 15px 0px 0px;
-        border-radius:15px 15px 0px 0px;
-display:table;
-margin-bottom:10px;
-width:100%;
-height:40px;
+.DataGrid table thead  tr.cg_header th:first-child, .DataGrid table tbody  tr td:first-child{
+border-right:none;
 }
 .DataGrid table thead  tr.cg_header th{
 height:25px;
 padding:0px 5px;
-text-align:right;
-width:14%;
+border-bottom:1px solid #CCCCCC;
 }
 .DataGrid table thead  tr.cg_header th a{
 color:red;
@@ -144,7 +126,6 @@ line-height:25px;
 }
 .DataGrid table thead  tr.cg_header th  a{
 background:url('../img/sort.png') no-repeat center right;
-padding-right:20px;
 }
 .DataGrid table thead  tr.cg_header th  a.asc{
 background:url('../img/sort-asc.png') no-repeat center right;
@@ -153,12 +134,10 @@ background:url('../img/sort-asc.png') no-repeat center right;
 background:url('../img/sort-desc.png') no-repeat center right;
 }
 .DataGrid table tbody  tr.cg_row td{
-border-left:1px dotted #ccc !important;
+border-bottom:1px dotted #ccc;
 }
-.DataGrid .cg_row{
-border:1px solid gray !important;
-width:100%;
-display:table;
+.DataGrid table tbody  tr.cg_row:last-child td{
+border-bottom:none;
 }
 .DataGrid table thead  tr.tableHeader th{
 padding:10px 5px;
@@ -202,77 +181,22 @@ margin:2px 5px 0px 0px;
 width:100%;
 }
 .DataGrid table tbody  tr.odd{
-background:rgb(255,255,255);
-/* Old browsers */
-/*linear-gradient*/
-background:-webkit-gradient(linear,0 0,100% 100%,color-stop(rgba(255,255,255,1),0),color-stop(rgba(241,241,241,1),0.34),color-stop(rgba(225,225,225,1),0.49),color-stop(rgba(246,246,246,1),1));
-background:-webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 34%, rgba(225,225,225,1) 49%, rgba(246,246,246,1) 100%);
-background:   -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 34%, rgba(225,225,225,1) 49%, rgba(246,246,246,1) 100%);
-background:     -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 34%, rgba(225,225,225,1) 49%, rgba(246,246,246,1) 100%);
-background:        linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 34%, rgba(225,225,225,1) 49%, rgba(246,246,246,1) 100%);
-/* FF3.6+ */
-background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(34%,rgba(241,241,241,1)), color-stop(49%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1)));
-/* Chrome,Safari4+ */
-background:-webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 34%,rgba(225,225,225,1) 49%,rgba(246,246,246,1) 100%);
-background:   -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 34%,rgba(225,225,225,1) 49%,rgba(246,246,246,1) 100%);
-background:     -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 34%,rgba(225,225,225,1) 49%,rgba(246,246,246,1) 100%);
-background:        linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 34%,rgba(225,225,225,1) 49%,rgba(246,246,246,1) 100%);
-/* Chrome10+,Safari5.1+ */
-/* Opera 11.10+ */
-/* IE10+ */
-background:-webkit-gradient(linear,100% 100%,0 0,color-stop(rgba(255,255,255,1),0),color-stop(rgba(241,241,241,1),0.34),color-stop(rgba(225,225,225,1),0.49),color-stop(rgba(246,246,246,1),1));
-background:-webkit-linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 34%,rgba(225,225,225,1) 49%,rgba(246,246,246,1) 100%);
-background:   -moz-linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 34%,rgba(225,225,225,1) 49%,rgba(246,246,246,1) 100%);
-background:     -o-linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 34%,rgba(225,225,225,1) 49%,rgba(246,246,246,1) 100%);
-background:        linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 34%,rgba(225,225,225,1) 49%,rgba(246,246,246,1) 100%);
-/* W3C */
-filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 );
-/* IE6-9 fallback on horizontal gradient */
-:;
+border-bottom:1px solid #f7f7f7;
 }
 .DataGrid table tbody  tr:hover{
 color:#000;
 }
-.DataGrid .cg_row td{
-width:14%;
-}
 .DataGrid > .Footer{
-background:rgb(255,255,255);
-/* Old browsers */
-/*linear-gradient*/
-background:-webkit-gradient(linear,left top,left bottom,color-stop(rgba(255,255,255,1),0),color-stop(rgba(241,241,241,1),0.5),color-stop(rgba(225,225,225,1),0.51),color-stop(rgba(246,246,246,1),1));
-background:-webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
-background:   -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
-background:     -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
-background:        linear-gradient(top, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%);
-/* FF3.6+ */
-background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(241,241,241,1)), color-stop(51%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1)));
-/* Chrome,Safari4+ */
-background:-webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:   -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:     -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:        linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-/* Chrome10+,Safari5.1+ */
-/* Opera 11.10+ */
-/* IE10+ */
-/*@@prefixmycss->No equivalent*/
-background:-webkit-linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:   -moz-linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:     -o-linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-background:        linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-/* W3C */
-filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
-/* IE6-9 */
 border:1px solid gray;
 /*border-radius*/
--webkit-border-radius:0px 0px 15px 15px;
-   -moz-border-radius:0px 0px 15px 15px;
-        border-radius:0px 0px 15px 15px;
+-webkit-border-radius:0px 15px 0px 15px;
+   -moz-border-radius:0px 15px 0px 15px;
+        border-radius:0px 15px 0px 15px;
 display:block;
 font-weight:bold;
-margin-top:10px;
+margin-right:10px;
 min-width:1024px;
-width:100%;
+width:98%;
 height:45px;
 position:relative;
 }
@@ -370,7 +294,7 @@ width: 360px;
 .dataTables_filter{
 float:left;
 height:50px;
-margin-left:-5px;
+margin-left:6px;
 direction:ltr;
 width: 360px;
 }
@@ -421,7 +345,7 @@ float:right;
 -webkit-box-shadow:1px 1px 3px #CCCCCC;
    -moz-box-shadow:1px 1px 3px #CCCCCC;
         box-shadow:1px 1px 3px #CCCCCC;
-margin: 23px 0px 30px 5px;
+margin:23px 0px 30px 5px;
 }
 .ColVis_Button{
 position:relative;
@@ -517,7 +441,7 @@ width:20px;
 div.DTTT_container{
 position:relative;
 float:right;
-margin: 23px 0px 30px 5px; 
+margin:23px 0px 30px 5px;
 }
 button.DTTT_button,
 div.DTTT_button,

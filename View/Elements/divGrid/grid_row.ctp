@@ -4,7 +4,6 @@
 			0 => __('not confirmed'),
 			1 => __('confirmed')
 		);
-		
 		foreach($rowColumns as $column):
 	?>
 	<td <?php if(isset($column['statusRow'])&&($column['row'] == '1' || $column['row'] == '0')) echo 'id="status'.$column['id'].'"'; ?> class="<?php echo $column['isSearchableData'] == 1 ? 'searchableGrid' : ''; ?>">
