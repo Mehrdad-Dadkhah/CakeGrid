@@ -299,10 +299,8 @@ This will output in the cell the users first and last name together. Concat uses
 		$this->Grid->addColumn( __('عنوان'), "/Page/title",array('width' => '20%'));
 
 ## Elements
-
 CakeGrid allows the usage of your own elements to be used in cells. This is useful if you're wanting to use a hasMany relationship into a dropdown or something similar.
 When using an element, a valuePath is not used. CakeGrid will pass the entire result of the row to the element.
-
 For Example:
 
 		$this->Grid->addColumn(__('وضعیت'), "/Page/status",array('width' => '10%' ,'element' => 'status'));    
@@ -324,49 +322,39 @@ to send your value to colum's element
 	$this->Grid->addColumn(__('بلوک راست'),'/blocks_sitelayouts/place',array('element' => 'block_counter','elementOtherValue' => array('place' => 0)));
 	
 and in the block_counter element:
-	
-	<?php
-		$cnt = 0;
-	    foreach ($rowData['Block'] as $block){
-	        if($block['blocks_sitelayouts']['place'] == $elementOtherValue['place'])
-	            $cnt ++;
-	    }
-	    echo $this->Html->link($cnt,
-	        array('controller' => 'blocks_sitelayouts','action' => 'JoinTogether',$rowData['Sitelayout']['id'],'right'),
-	        array('title' => __('ویرایش'))
-	    );
-    ?>
-    
+
+	$cnt = 0;
+	foreach ($rowData['Block'] as $block){
+	    if($block['blocks_sitelayouts']['place'] == $elementOtherValue['place'])
+	        $cnt ++;
+	}
+	echo $this->Html->link($cnt,
+	    array('controller' => 'blocks_sitelayouts','action' => 'JoinTogether',$rowData['Sitelayout']['id'],'right'),
+	    array('title' => __('ویرایش'))
+	);
+
 and we have some part of data like allData to have all return data to manage ...
-    
+
 ## Empty fileds
 if be a empty field in a record you can show a message with tow way ...
 as default it shows "No Result"
 you can set a global option for current table with:
-	<?php
-		$this->options(
-			'empty_message' => __('empty')
-		);
-	?>
-
+	$this->options(
+		'empty_message' => __('empty')
+	);
 and can specify empty text for each column for example:
 
-	<?php
-		$this->Grid->addColumn(__('سرآغاز'),'/ParentFrontsMenu/title',array('emptyVal' => __('بدون سرآغاز'))); 
-	?>
-
+	$this->Grid->addColumn(__('سرآغاز'),'/ParentFrontsMenu/title',array('emptyVal' => __('بدون سرآغاز'))); 
 ## Readable Value
 if field value is int and you want to replace it to readable value can use this feature like:
 
-	<?php
-		$fileType = array(
-		    'عکس',
-		    'صوت',
-		    'فیلم'
-		);
-		$this->Grid->addColumn(__('نوع فایل'),'/GalleriesFile/type',array('readableVal' => $fileType));
-	?>
-
+	$fileType = array(
+	    'عکس',
+	    'صوت',
+	    'فیلم'
+	);
+	$this->Grid->addColumn(__('نوع فایل'),'/GalleriesFile/type',array('readableVal' => $fileType));
+	
 ##License
 
  Copyright (c) 2011 The Daily Save, LLC.  All rights reserved.
